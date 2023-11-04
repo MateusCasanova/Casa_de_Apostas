@@ -1,0 +1,30 @@
+.footer {
+    background-color: #323b45;
+    padding: 150px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25%;
+  }
+  
+  .footer .logo {
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 10%;
+  }
+  
+  .footer .links-uteis, .footer .sobre-nos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 15%;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  

@@ -1,0 +1,141 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #323b45;
+    padding: 40px 30px;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000;
+    background-color: #0f1923;
+  }
+  
+  
+  .header .logo {
+    position: absolute;
+    left: 100px;  
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .header .navigation {
+    position: absolute;
+    right: 35vh;  
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header .navigation .login-button {
+    background-color: transparent;
+  }
+  
+  .header .navigation a {
+    padding: 16px 12px;
+    color: white;
+    font-size: 14px;
+    font-family: SofiaPro,roboto,sans-serif,Nasalization!important;
+    background-color: #5a3d8f;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+  }
+  
+  .header .navigation a:hover {
+    background-color: #5a3d8f;
+  }
+  
+  .header .middle-content {
+    color: white;
+  }
+  
+  .header .middle-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; 
+  }
+  
+  .balance-box {
+    background-color: #0f1923;
+    border: 1px solid #323b45;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-family: SofiaPro,roboto,sans-serif,Nasalization!important;
+  }
+  
+  .nav-link {
+    color: #bbbec6;
+    font-size: 1.6rem;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin: 1.5rem;
+  }
+  
+  .original{
+    color: #bbbec6;
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    transition: color 0.3s;
+    margin: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-link:hover {
+    color: #5a3d8f; 
+  }
+  
+
+
+  .button-deposit, .button-withdraw {
+    background-color: #0f1923;
+    color: #bbbec6;
+    border: 1px solid #323b45;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+  }
+  
+  .button-exit {
+    font-weight: bold;
+  }
+  
+  .balance {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .header .burger-menu-button {
+    background-color: transparent; 
+    border: none; 
+    color: white; 
+    font-size: 25px; 
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    margin-top: 10px;
+    left: 10px; 
+  }
+  
+  .stylish-text {
+    color: #bbbec6;
+    font-size: 16px;
+    font-family: SofiaPro,roboto,sans-serif,Nasalization!important;
+    transition: color 0.3s;
+    font-weight: bold;
+  }
+
+
+  .stylish-text:hover {
+    color: #5f5f5f;
+  }
+  

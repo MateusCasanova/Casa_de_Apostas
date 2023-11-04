@@ -1,0 +1,170 @@
+
+.limbo-container {
+    display: flex;
+    width: 60%;
+    height: 65vh;
+    margin: 0 auto;
+    background-color: #0f1923;
+    border-radius: 5px;       
+    box-sizing: border-box;
+    margin-top: 8%;
+    border: 10px solid #1a242d;
+}
+
+.controls-container {
+    flex: 0.3; 
+    background-color: #1a242d;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.input-group {
+    flex: 1; 
+    min-width: 120px; 
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #9ca7be;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font: arial;
+    text-align: left;
+}
+
+.input-group input {
+    width: 100%;  
+    padding: 10px;
+    background-color: #0f1923;
+    border: none;
+    color: white;
+    border-radius: 5px; 
+    box-sizing: border-box;  
+    border: 1px solid #2f4553;
+    text-align: left;
+}
+
+.aposta-btn {
+    display: block;
+    background-color: #5c3198;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    font-size: 1rem;
+    font-family: sofiapro,sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 30px; 
+    box-sizing: border-box; 
+}
+
+
+.game-container {
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 4% 2%;  
+}
+
+.game-inputs {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    width: 90%;
+    gap: 10px; 
+}
+
+.game-display {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-container h2 {
+    color: white;
+    font-size: 5rem;
+}
+
+
+.inputs-box {
+    width: 100%;
+    max-width: 100%; 
+    overflow: auto;
+    flex-direction: column;
+    padding: 10px;  
+    margin: 10px 0;
+    background-color: #1a242d;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+.input-group input::placeholder {
+    color: white;
+}
+
+
+.error {
+    border: 2px solid red !important; 
+}
+
+
+.green {
+    color: green !important;
+}
+
+.red {
+    color: red !important;
+}
+
+.history-container {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.history-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding: 5px 15px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+
+
+@media (max-width: 1200px) {
+    .game-inputs, .inputs-box {
+        width: 90%;
+    }
+
+    .game-container {
+        padding: 5% 4%; 
+    }
+
+}
+
+
+@media (max-height: 900px) {
+    .game-inputs, .inputs-box {
+        height: 80%;
+        margin-bottom: -20px;
+    }
+
+    .game-container {
+        padding: 5% 4%; 
+    }
+
+}

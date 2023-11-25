@@ -1,0 +1,136 @@
+.crash-container {
+    display: flex;
+    flex-direction: column; 
+    width: 30%;
+    height: 70vh;
+    margin: 150px auto;
+    background-color: #0f1923;
+    border-radius: 5px;
+    border: 10px solid #1a242d;
+    box-sizing: border-box; 
+    justify-content: space-between; 
+    margin-bottom: 20%;
+}
+
+.crash-controls-container {
+    flex: 0.3;
+    background-color: #1a242d;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.crash-input-group {
+    margin-bottom: 20px;
+}
+
+.crash-input-group label {
+    display: block;
+    color: #9ca7be;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.crash-input-group input {
+    width: 100%;
+    padding: 20px;
+    background-color: #0f1923;
+    border: 1px solid #242d37;
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.crash-aposta-btn {
+    background-color: #5c3198;
+    color: #0f212e;
+    padding: 10px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.crash-game-container {
+    flex: 0.7;
+    padding: 10px 20px;
+}
+
+.crash-display {
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.crash {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+
+.multiplier {
+    font-size: 5rem;
+    color: white;
+    margin-top: 0;
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; 
+    bottom: 0; 
+    background: rgba(15, 25, 35, 0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-bar {
+    position: relative; 
+    width: 50%; 
+    height: 20px;
+    background: #213743;
+    border-radius: 10px; 
+}
+
+.loading-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; 
+    background: #5c3198; 
+    width: 100%; 
+    animation: loadingAnimation 10s linear forwards; 
+    border-radius: 10px; 
+}
+
+@keyframes loadingAnimation {
+    to { width: 0; } 
+}
+
+.countdown {
+    position: absolute;
+    color: white;
+    font-size: 2rem; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+
+.multiplier-crashed {
+    color: red;
+}

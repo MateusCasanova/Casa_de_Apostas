@@ -8,8 +8,8 @@
   padding: 15px;
   transition: transform 0.3s ease-in-out;
   z-index: 1001;
+  transform: translateX(0);
 }
-
 
 .burger-menu.minimized {
   transform: translateX(-100%);
@@ -37,3 +37,28 @@
 }
 
 
+.burger-menu-close {
+  display: none; 
+  position: fixed;
+  top: 90px; 
+  right: 10px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+@media screen and (max-width: 600px) {
+  .burger-menu {
+    width: 50%; 
+    height: 100%; 
+    top: 0; 
+    padding-top: 60px; 
+  }
+
+  .burger-menu:not(.minimized) .burger-menu-close {
+    display: block;
+  }
+}

@@ -8,6 +8,7 @@ import LoginPopup from './LoginPopup';
 import DepositPopup from './DepositPopup';
 import WithdrawPopup from './WithdrawPopup';
 import Footer from './Footer';
+import Crash from './Crash';
 
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
     gameComponent = <CoinFlip loggedInUser={loggedInUser} />;
   } else if (currentGame === 'Limbo') {
     gameComponent = <Limbo loggedInUser={loggedInUser} />;
+  } else if (currentGame === 'Crash') {
+    gameComponent = <Crash loggedInUser={loggedInUser} />;
   }
   
 

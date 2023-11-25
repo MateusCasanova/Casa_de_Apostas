@@ -20,7 +20,7 @@ function Header({
     return (
         <div className="header">
             <button className="burger-menu-button" onClick={onToggleBurgerMenu}><RxHamburgerMenu /></button>
-            <BurgerMenu isOpen={isBurgerMenuOpen} onGameChange={onGameChange} />
+            <BurgerMenu isOpen={isBurgerMenuOpen} onClose={onToggleBurgerMenu} onGameChange={onGameChange} />
             <span className="logo">BetPix</span>
             <div className="navigation">
                 {loggedInUser ? (

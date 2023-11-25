@@ -15,7 +15,7 @@ app.use(express.json());
 app.use('/api/users', userRoutes); 
 
 
-mongoose.connect('sua_indentificaçao_mongodb', {
+mongoose.connect('mongodb+srv://fujas:250403@cluster0.kbv8sof.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {

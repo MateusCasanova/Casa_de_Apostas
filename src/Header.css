@@ -37,7 +37,7 @@
     color: white;
     font-size: 14px;
     font-family: SofiaPro,roboto,sans-serif,Nasalization!important;
-    background-color: #5a3d8f;
+    background-color: #0e890e;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -45,7 +45,7 @@
   }
   
   .header .navigation a:hover {
-    background-color: #5a3d8f;
+    background-color: #0e890e;
   }
   
   .header .middle-content {
@@ -89,7 +89,7 @@
   }
   
   .nav-link:hover {
-    color: #5a3d8f; 
+    color: #0e890e; 
   }
   
 

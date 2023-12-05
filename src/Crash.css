@@ -44,7 +44,7 @@
 }
 
 .crash-aposta-btn {
-    background-color: #5c3198;
+    background-color: #0e890e;
     color: #0f212e;
     padding: 10px;
     border: none;
@@ -111,7 +111,7 @@
     top: 0;
     left: 0;
     height: 100%; 
-    background: #5c3198; 
+    background: #0e890e; 
     width: 100%; 
     animation: loadingAnimation 10s linear forwards; 
     border-radius: 10px; 

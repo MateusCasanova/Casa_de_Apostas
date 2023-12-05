@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './Header';
 import CoinFlip from './CoinFlip';
@@ -12,19 +12,21 @@ import Crash from './Crash';
 
 
 function App() {
+
+
   const [burgerMenuOpen, setBurgerMenuOpen] = useState(false);
   const [balance, setBalance] = useState(0);
   const [showDeposit, setShowDeposit] = useState(false);
   const [showWithdraw, setShowWithdraw] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
-  const [showLogin, setShowLogin] = useState(false); 
+  const [showLogin, setShowLogin] = useState(false);
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [currentGame, setCurrentGame] = useState('CoinFlip');
 
   const toggleBurgerMenu = () => {
     setBurgerMenuOpen(!burgerMenuOpen);
   };
-  
+
 
   let gameComponent;
   if (currentGame === 'CoinFlip') {
@@ -34,12 +36,12 @@ function App() {
   } else if (currentGame === 'Crash') {
     gameComponent = <Crash loggedInUser={loggedInUser} />;
   }
-  
+
 
 
   const handleLogin = async (username) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/users/getBalance`, {
+      const response = await fetch(`https://betpixoficialapi-3907ceb27584.herokuapp.com/api/users/getBalance`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -58,19 +60,19 @@ function App() {
       console.error('Erro na chamada da API:', error);
     }
   };
-  
-  
+
+
 
   const handleDeposit = async (amount) => {
-   
-    const response = await fetch('http://localhost:5000/api/users/deposit', {
+
+    const response = await fetch('https://betpixoficialapi-3907ceb27584.herokuapp.com/api/users/deposit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ username: loggedInUser, amount }),
     });
-  
+
     const data = await response.json();
     if (data.success) {
       setBalance(data.balance);
@@ -80,15 +82,15 @@ function App() {
   };
 
   const handleWithdraw = async (amount) => {
-  
-    const response = await fetch('http://localhost:5000/api/users/withdraw', {
+
+    const response = await fetch('https://betpixoficialapi-3907ceb27584.herokuapp.com/api/users/withdraw', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ username: loggedInUser, amount }),
     });
-  
+
     const data = await response.json();
     if (data.success) {
       setBalance(data.balance);
@@ -96,6 +98,19 @@ function App() {
       console.error('Erro ao sacar:', data.message);
     }
   };
+
+  function checkScreenSize() {
+    const warningElement = document.getElementById('screen-size-warning');
+    if (window.innerWidth < 1000) {
+      document.body.classList.add('blurred');
+    } else {
+      document.body.classList.remove('blurred');
+    }
+  }
+
+  window.onload = checkScreenSize;
+  window.onresize = checkScreenSize;
+
 
   return (
     <div className="App">
@@ -119,7 +134,11 @@ function App() {
       {showDeposit && <DepositPopup onClose={() => setShowDeposit(false)} onDeposit={handleDeposit} />}
       {showWithdraw && <WithdrawPopup onClose={() => setShowWithdraw(false)} onWithdraw={handleWithdraw} />}
       <Footer />
+      <div id="screen-size-warning">
+        Tamanho da tela não é suportado.
+      </div>
     </div>
+
   );
 }
 

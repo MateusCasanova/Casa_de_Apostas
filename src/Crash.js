@@ -8,6 +8,9 @@ const Crash = ({ loggedInUser, onDepositClick, onWithdrawClick, onLogout }) => {
     const [crashPoint, setCrashPoint] = useState(generateCrashPoint());
     const [countdown, setCountdown] = useState(10);
     const [bet, setBet] = useState(0);
+    const [hasWithdrawn, setHasWithdrawn] = useState(false);
+    const [winAmount, setWinAmount] = useState(0);
+
 
     useEffect(() => {
         let interval;

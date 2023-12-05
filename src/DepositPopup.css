@@ -35,7 +35,7 @@
   }
   
   .default-btn-deposit {
-    background-color: #5a3d8f;
+    background-color: #0e890e;
     color: #bbbec6;
     border: none;
     border-radius: 5px;
@@ -58,7 +58,7 @@
   }
   
   .popup-box-deposit .default-btn-deposit:hover {
-    background-color: #6a4da0;
+    background-color: #0e890e;
   }
   
   .close-btn-deposit {

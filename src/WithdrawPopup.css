@@ -44,7 +44,7 @@
     width: calc(100% - 30px); 
     margin-bottom: 15px;
     box-sizing: border-box;
-    background-color: #5a3d8f;
+    background-color: #0e890e;
     color: #bbbec6;
     border: none;
     border-radius: 5px;
@@ -54,7 +54,7 @@
   
   
   .popup-box-withdraw .default-btn-withdraw:hover {
-    background-color: #6a4da0;
+    background-color: #0e890e;
   }
   
   .close-btn-withdraw {
